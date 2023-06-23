@@ -1,0 +1,220 @@
+
+h2 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 75px;
+  &.sm {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 100%;
+    color: $main;
+  }
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  &.big {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 133%;
+  }
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+p {
+  &.sm {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  &.big {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.main {
+  overflow: hidden;
+  padding-top: 132px;
+}
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 50px;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #f7f7f7;
+  color: $black3;
+  cursor: pointer;
+  transition: 0.3s ease;
+  &:hover {
+    opacity: 0.8;
+  }
+  &.active {
+    background-color: $black3;
+    color: $white;
+  }
+}
+
+.showMoreBtn {
+  display: flex;;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 400;
+  padding-right: 26px;
+  position: relative;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease;
+  &:hover {
+    opacity: 0.7;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid $black3;
+    border-right: 2px solid $black3;
+    transform: translateY(-80%) rotate(135deg);
+    transition: 0.3s ease;
+  }
+  &.active {
+    &::before {
+      transform: translateY(-30%) rotate(-45deg);
+    }
+  }
+}
+
+.select {
+  width: 100%;
+  height: 100%;
+  &.active {
+    .select {
+      &__options {
+        display: block;
+      }
+    }
+  }
+  &__selected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+  }
+  &__options {
+    overflow-y: auto;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: -1px;
+    width: calc(100% + 2px);
+    display: none;
+    z-index: 4;
+    background-color: $white;
+
+    li {
+      transition: 0.3s ease;
+      cursor: pointer;
+      text-align: center;
+      padding: 14px 60px;
+      background-color: $white;
+      border: 1px solid $black3;
+      border-top: unset;
+    }
+  }
+}
+.pagination {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 80px;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    li {
+      cursor: pointer;
+      transition: .3s ease;
+      background-color: transparent;
+      color: #ccc;
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: 700;
+      padding: 6px;
+      margin-right: 10px;
+      &.active {
+        color: $orange;
+      }
+      &:hover {
+        opacity: 1;
+        color: $orange;
+      }
+      &.btn {
+        color: transparent;
+        top: 50%;
+        left: 0;
+        position: absolute;
+        margin: 0;
+        width: 71px;
+        height: 46px;
+        border: 1px solid #CCCCCC;
+        background-color: transparent;
+        cursor: pointer;
+        transition: .3s ease;
+        transform: translateY(-50%);
+        &::before {
+          position: absolute;
+          content: "";
+          top: 50%;
+          left: 50%;
+          width: 14px;
+          height: 14px;
+          border-top: 3.5px solid #ccc;
+          border-right: 3.5px solid #ccc;
+          background-color: transparent;
+          transform: translate(-30%, -50%) rotate(-135deg);
+          transition: .3s ease;
+        }
+        &:hover {
+          opacity: 1;
+          border-color: $orange;
+          &::before {
+            border-color: $orange;
+          }
+        }
+      }
+      &.last {
+        margin: 0;
+      }
+      &.dots {
+        &:hover {
+          color: #ccc;
+          cursor: default;
+        }
+      }
+      &.next {
+        left: unset;
+        right: 0;
+        &::before {
+          transform: translate(-70%, -50%) rotate(45deg);
+        }
+      }
+    }
+  }
+}

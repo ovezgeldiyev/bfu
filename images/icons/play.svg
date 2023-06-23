@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48.625" height="48.625" viewBox="0 0 48.625 48.625">
+  <g id="play" transform="translate(-346 -1630.375)">
+    <g id="Rectangle_29" data-name="Rectangle 29" transform="translate(359 1640)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="25" height="31" stroke="none"/>
+      <rect x="0.5" y="0.5" width="24" height="30" fill="none"/>
+    </g>
+    <path id="Icon_ionic-ios-play-circle" data-name="Icon ionic-ios-play-circle" d="M27.688,3.375A24.313,24.313,0,1,0,52,27.688,24.309,24.309,0,0,0,27.688,3.375Zm9.8,24.768-16.037,9.7a.52.52,0,0,1-.783-.456v-19.4a.518.518,0,0,1,.783-.456l16.037,9.7A.536.536,0,0,1,37.483,28.143Z" transform="translate(342.625 1627)" fill="#c9081b"/>
+  </g>
+</svg>
